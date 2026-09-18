@@ -1,8 +1,20 @@
+import { Routes , Route} from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import LoginPage from "./pages/LoginPage"
+import ProfilePage from "./pages/ProfilePage"
 
 
 const App = () => {
   return (
-    <div className="items-center text-6xl text-current flex flex-wrap justify-center">App is a frouit</div>
+    <>
+      <div className="bg-blue-300">
+        <Routes>
+          <Route  path='/' element={<HomePage/>} />
+          <Route path='/login' element={<LoginPage/>} />
+          <Route path='profile' element={<ProfilePage/>} />
+        </Routes>
+      </div>
+    </>
   )
 }
 
