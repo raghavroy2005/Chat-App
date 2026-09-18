@@ -6,7 +6,7 @@ import RightSidebar from "../components/RightSidebar"
 
 const HomePage = () => {
 
-    const [selectedUser, ] = useState(false)
+    const [selectedUser,setSelectedUser ] = useState(false)
   return (
     <div className="border w-full h-screen">
        <div className={`backdrop-blue-xl border-2 border-gray-600 rounded-2xl overflow-hidden
