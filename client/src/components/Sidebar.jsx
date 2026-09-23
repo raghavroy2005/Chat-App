@@ -15,12 +15,12 @@ const Sidebar = ({selectedUser,setSelectedUser}) => {
                     <div className="absolute top-full right-0 z-20 w-32 p-5 rounded-md
                     bg-[#282142] border border-gray-600 text-gray-100 hidden
                      group-hover:block">
-                        <p onClick={()=>navigate()}>Edit Profile</p>
+                        <p onClick={()=>navigate('/profile')} className="cursor-pointer">Edit Profile</p>
                         <hr className="my-2 border-t border-gray-500" />
                         <p className="cursor-pointer text-sm">Logout</p>
                     </div>
                 </div>
-            </div>
+            </div> 
             <div className="bg-[#282142] rounded-full flex items-center gap-2 py-3 px-4 mt-5">
 
                 <img src={assets.search_icon} alt="Search" className="w-4" />
@@ -31,7 +31,7 @@ const Sidebar = ({selectedUser,setSelectedUser}) => {
 
         <div className="flex flex-col">
             {userDummyData.map((user,index)=>(
-                <div onClick={()=> {setSelectedUser}}
+                <div onClick={()=> setSelectedUser(user)}
                 key={index}  className={`relative flex items-center gap-2 p-2 pl-4 rounded 
                 cursor-pointer max-sm:text-sm ${selectedUser?._id === user._id && 'bg-[#282142]/50'}`}>
                     <img src={user?.profilePic || assets.avatar_icon} alt=""
